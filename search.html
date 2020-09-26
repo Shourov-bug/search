@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./search.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <input type="text" id="display" placeholder="Enter text"><br>
+        <button onclick="searchingine()">Search</button><br>
+        <ul id="movie"><li>Lucy</li><li>Intersteller</li><li>Forrest Gump</li><li>Memmories of Murder</li><li>Triangle</li><li>Forgotten</li><li>Parasite</li><li>A Hard Day</li></ul>
+        <!-- <ul id="movie"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul> -->
+    </div>
+
+    <script>
+        var txt = document.getElementById("movie").childNodes;
+        var len = txt.length;
+        var intxt = document.getElementById("movie").innerText;
+        console.log(len);
+        // console.log(txt[4].innerText);
+
+        function searchingine(){
+            var disv = document.getElementById('display').value;
+            for(var i = 0; i < len; i++){
+                if(disv == txt[i].innerText){
+                    document.write("Search Result: " + txt[i].innerText);
+                }
+            }
+            console.log(disv);
+        }
+    </script>
+</body>
+</html>
